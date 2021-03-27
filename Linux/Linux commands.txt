@@ -1,0 +1,116 @@
+Linux commands
+
+# to find a directory, -iname  =(case insensitive)
+find -type d -iname *xxxx* 
+
+# to find a file, -iname  =(case insensitive)
+ find -type f -iname *xxxx*  
+
+# search (-i case insensitive)
+grep -i guavaberries *  	
+
+# additional words to find
+grep “guavaberries|optional” *	
+
+# to list permission
+ls -l
+
+# change owner
+chown
+
+# assigning salley to sudo group
+sudo usermod -aG sudo sally
+
+# to add groups
+sudo addgroup
+
+# changing user chan to group 500
+groupmod -g 500 chan
+
+# to see id of file. Xfile= the file
+id Xfile
+
+# changing id -u..user to #2000 for user adam
+sudo usermod -u 2000 adam
+
+# remove “x” execute privilege permission. Xfile= the file
+sudo chmod -x Xfile
+
+# add “x” execute privilege permission. Xfile = the file
+sudo chmod +x Xfile
+
+# to add “x”execute privilege permission to group
+sudo chmod g+x file
+
+#  to check all services
+systemctl -t service
+
+# stop program smbd
+sudo systemctl top smbd
+
+# stop the enable to run on reboot
+sudo systemctl disable smbd
+
+# Incremental backup---		.snar   example file is emerg_back_sun
+  tar cvvWf emerg_back_sun.tar --listed-incremental=emerg_backup.snar --level=0 emergency
+
+# ----starting with new new-- with incrementals=====  .snar
+document/epscript/emergency Ls -l admit/
+sudo tar cvvWf emerg_back_sun.tar --listed-incremental=emerg_backup.snar --level=0 emergency
+
+#  |-new-updated file to be-|     --listed-incremental=(when created)          |-directory-|
+tar cvvWf epscript_back_wed.tar --listed-incremental=epscript_backup.snar testenvir
+
+# Cron syntax
+36 2 * * 7 root /usr/local/sbin/backup.sh  = execute sunday at 2:36am
+0=sunday 1=mon
+7=sunday
+
+0-59Minutes-0-23=hours 24 sys- day-month- 7=day of week- root=user- /usr=file
+*****		= run every minute
+*/2 =2 minutes in the first column
+
+# start/stop cron
+Systemctl status/start/stop cron or cron -d
+
+# To list off cron tables info
+crontab -l
+
+# modify/edit of current user logged in as
+crontab -e
+
+# making multiple directories
+sudo mkdir /usr/share/{doctors,patients,treatments}
+
+# cron/d
+/etc/cron/d
+
+# .daily or .weekly or .monthly
+/etc/cron.daily
+
+# list permission, only root should have writable.
+Ls -l /etc/cron.daily
+
+# list permission, only root should have writable.
+Ls -l /etc/cron.weekly
+
+# To force log rotate to run
+sudo logrotate -vf /etc/log/lograte.conf
+
+# to open directory, able to add/drop files
+explorer .
+
+# to stage
+git add .
+
+# to see what was added/changed
+git status
+
+# to add notes on what is change or done
+git commit -m “say what is done/change file”
+
+# to update on github
+git push
+
+# under the hood
+gitk 
